@@ -22,7 +22,7 @@ class InitialConditions():
     def getEner_in(self):
         return self.ener_in
 
-lvl1 = InitialConditions(np.array([0.0,0.0,0.0]), np.array([0.0,0.0,0.0]), 1.0, 100.0)
+lvl1 = InitialConditions(np.array([0.0,0.0]), np.array([0.0,0.0]), 1, 100.0)
 
 
 class Player():
@@ -58,7 +58,7 @@ class Player():
 
 class Obst():
     def __init__(self):
-        self.pos = np.array([(0.2 + rd.random())*10.0, (0.2 + rd.random())*10.0, (rd.random() - 0.5)*10.0])
+        self.pos = np.array([(0.2 + rd.random())*10.0, (0.2 + rd.random())*10.0])
         self.din = rd.choice([True, False])
         self.color = "r"
     def getPos(self):
@@ -73,7 +73,7 @@ plyr1 = Player("Guille")
 
 class Goal():
     def __init__(self):
-        self.pos = np.array([15.0, 15.0, 0])
+        self.pos = np.array([15.0, 0.0])
         self.color = "g"
     def getPos(self):
         return self.pos
@@ -95,18 +95,3 @@ z = []
 for i in range(len(obsts)):
     x.append(obsts[i].getPos()[0])
     y.append(obsts[i].getPos()[1])
-    z.append(obsts[i].getPos()[2])
-
-
-
-ax = plt.figure().add_subplot(projection='3d')
-ax.scatter(x, y, z, c="r")
-ax.scatter(plyr1.getPos()[0], plyr1.getPos()[1], c=plyr1.getColor())
-ax.scatter(goal.getPos()[0], goal.getPos()[1], c=goal.getColor())
-
-# Customize the view angle so it's easier to see that the scatter points lie
-# on the plane y=0
-ax.view_init(elev=20., azim=-35)
-
-
-plt.show()

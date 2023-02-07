@@ -1,10 +1,9 @@
 Quiero hacer un juego con mi propio motor físico.
-Quiero que sea 3D, que haya gravedad, electromagnetismo, nociones de potencia y energía junto con temperatura y obstáculos.
+Quiero que sea 2D, que haya gravedad, electromagnetismo, nociones de potencia y energía junto con temperatura y obstáculos.
 La idea es llegar a la meta antes de que se acabe el tiempo.
 Somos un electrón. Tenemos que usar los potenciales para acelerarnos y evitar ser capturados por los protones. También hay campos magnéticos.
 
-Primero vamos a desarrollar los objetos y después el motor. Nosotros vamos a ser el único ente dinámico.
-
+Primero vamos a desarrollar los objetos y después el motor.
 Nosotros vamos a tener:
 Posición, espín, velocidad, energía interna.
 
